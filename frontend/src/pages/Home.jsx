@@ -11,7 +11,7 @@ export default function Home() {
     // 2. Apontamos para o endpoint de TRABALHOS (fotos)
     const urlBase = import.meta.env.VITE_API_BASE_URL;
     
-    fetch(`${import.meta.env.VITE_API_BASE_URL}/trabalhos/`, {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/trabalhos//`, {
       headers: { 'Accept': 'application/json' }
     })
       .then(res => {
@@ -62,7 +62,10 @@ export default function Home() {
     {trabalhos.map(job => (
       <div key={job.id} className="card-premium-focus">
         <div className="img-holder-focus">
-          <img src={job.imagem} alt={job.titulo} loading="lazy" />
+        <img 
+          src={`http://127.0.0.1:8001${job.imagem}`} 
+          alt={job.titulo} 
+        />  
         </div>
         <div className="card-meta-focus">
           <h3>{job.titulo || "Projeto Autoral"}</h3>

@@ -6,7 +6,7 @@ router = DefaultRouter()
 
 # Agora cada um tem seu "caminho" próprio na API
 router.register(r'orcamentos', OrcamentoViewSet, basename='orcamentos')
-router.register(r'trabalhos', TrabalhoViewSet, basename='trabalhos')
+router.register(r'trabalhos/', TrabalhoViewSet, basename='trabalhos')
 
 urlpatterns = [
     path('', include(router.urls)),
