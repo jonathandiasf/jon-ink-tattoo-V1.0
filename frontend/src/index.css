@@ -1,0 +1,181 @@
+:root {
+  --ink-red: #c00000;
+  --dark-100: #000000;
+  --dark-200: #0a0a0a;
+  --gray-text: #666;
+  --gray-light: #888;
+}
+
+body { 
+  background: var(--dark-100); 
+  color: #fff; 
+  margin: 0; 
+  font-family: 'Inter', sans-serif; 
+  overflow-x: hidden;
+}
+
+/* --- COMPONENTES GLOBAIS --- */
+.navbar-minimal {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 8%; background: rgba(0,0,0,0.95);
+  position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #111;
+}
+
+.nav-logo { letter-spacing: 5px; font-weight: 900; text-decoration: none; color: #fff; }
+
+.nav-links-discretos a { 
+  color: var(--gray-text); text-decoration: none; margin-left: 25px; 
+  font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; 
+}
+
+.nav-links-discretos a:hover { color: var(--ink-red); }
+
+/* --- HOME SECTIONS --- */
+.hero-stealth {
+  height: 60vh !important; /* Compactado conforme pedido */
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative; text-align: center; padding-top: 40px;
+}
+
+.hero-background-blur {
+  position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+  background: url('/Perfil Marcante.jpg') center/cover no-repeat;
+  filter: blur(50px) brightness(0.15); z-index: -1;
+}
+
+.hero-logo-main { width: 180px; border-radius: 50%; border: 2px solid var(--ink-red); margin-bottom: 20px; }
+
+.hero-subtitle { letter-spacing: 10px; color: #444; font-size: 0.7rem; margin-bottom: 30px; }
+
+.btn-discreto-outline { 
+  border: 1px solid #333; color: #fff; text-decoration: none; 
+  padding: 12px 30px; font-size: 0.9rem; transition: 0.4s; 
+}
+
+.btn-discreto-outline:hover { border-color: var(--ink-red); background: rgba(188, 0, 0, 0.1); }
+
+.content-container { max-width: 1100px; margin: 0 auto; padding: 100px 8% !important; }
+
+.title-stealth { font-size: 1.4rem; letter-spacing: 6px; color: var(--ink-red); margin-bottom: 40px; text-transform: uppercase; }
+
+/* VITRINE */
+.grid-editorial { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card-premium { border: 1px solid #111; transition: 0.2s; }
+.img-holder { aspect-ratio: 1/1; overflow: hidden; }
+.img-holder img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); transition: 0.5s; }
+.card-premium:hover img { filter: brightness(1.1); }
+.card-meta { padding: 15px; border-top: 1px solid #111; }
+.card-meta h3 { font-size: 0.85rem; letter-spacing: 2px; margin: 0; }
+.card-meta p { color: var(--gray-text); font-size: 0.75rem; margin-top: 5px; }
+
+/* Container que permite o deslize lateral */
+.highlight-gallery-container {
+  display: flex; /* Muda de grid para flex para alinhar lado a lado */
+  overflow-x: auto; /* Habilita o scroll horizontal */
+  scroll-snap-type: x mandatory; /* Trava a imagem ao deslizar */
+  gap: 15px;
+  padding: 20px 10px 40px 10px;
+  scrollbar-width: none; /* Esconde barra no Firefox */
+  -webkit-overflow-scrolling: touch; /* Melhora o deslize no iOS */
+}
+
+.highlight-gallery-container::-webkit-scrollbar {
+  display: none; /* Esconde barra no Chrome/Safari */
+}
+
+/* O Card Individual */
+.card-premium-focus {
+  flex: 0 0 80%; /* No mobile, cada foto ocupa 80% da largura */
+  scroll-snap-align: center; /* Centraliza a foto ao parar de deslizar */
+  background: #0a0a0a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Efeito de Sombra nas outras quando uma está em foco */
+.highlight-gallery-container:hover .card-premium-focus {
+  filter: brightness(0.5);
+  transform: scale(0.95);
+}
+
+.highlight-gallery-container .card-premium-focus:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(188, 0, 0, 0.5);
+}
+
+/* Ajuste para Desktop (Telas Maiores) */
+@media (min-width: 1024px) {
+  .card-premium-focus {
+    flex: 0 0 30%; /* Mostra 3 fotos simultâneas no PC */
+  }
+}
+
+.img-holder-focus img {
+  width: 100%;
+  height: 450px; /* Altura fixa para manter o padrão */
+  object-fit: cover;
+}
+
+.mobile-hint { text-align: center; color: var(--gray-text); font-size: 0.75rem; margin-top: 10px; }
+
+/* --- PÁGINA DE ORÇAMENTO (CARD CENTRALIZADO) --- */
+.orcamento-page-wrapper {
+  background: #000; min-height: 100vh; display: flex; flex-direction: column;
+}
+
+.centralizer-container {
+  flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;
+}
+
+.card-stealth-form {
+  background: var(--dark-200); width: 100%; max-width: 480px; padding: 40px;
+  border-radius: 30px; border: 1px solid #1a1a1a;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.card-stealth-form h2 { font-size: 1.8rem; text-align: center; margin-bottom: 10px; letter-spacing: 2px; }
+
+.card-subtitle { text-align: center; color: #555; font-size: 0.8rem; margin-bottom: 30px; }
+
+.vertical-form { display: flex; flex-direction: column; gap: 20px; }
+
+.field-group { display: flex; flex-direction: column; gap: 8px; }
+
+.field-group label { font-size: 0.7rem; color: var(--gray-light); text-transform: uppercase; letter-spacing: 1px; }
+
+.field-group input, .field-group select, .field-group textarea {
+  background: #111; border: 1px solid #222; border-radius: 12px;
+  padding: 14px; color: #fff; outline: none; transition: 0.3s;
+}
+
+.field-group input:focus { border-color: var(--ink-red); background: #151515; }
+
+.btn-send-whatsapp {
+  background: var(--ink-red); color: #fff; border: none; padding: 18px;
+  border-radius: 12px; font-weight: 900; letter-spacing: 2px;
+  cursor: pointer; margin-top: 10px; transition: 0.4s;
+}
+
+.btn-send-whatsapp:hover { background: #ff0000; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(188, 0, 0, 0.3); }
+
+.btn-back-home { text-align: center; color: #333; text-decoration: none; font-size: 0.75rem; margin-top: 15px; display: block; }
+
+/* --- FOOTER --- */
+.footer-minimal { background-color: #000; padding: 80px 5% 40px; margin-top: 80px; }
+.footer-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, #1a1a1a, transparent); margin-bottom: 50px; }
+.footer-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+.footer-logo-text { font-size: 2.5rem; font-weight: 900; letter-spacing: 10px; margin: 0; }
+.footer-group { display: flex; flex-direction: column; gap: 10px; }
+.footer-group span { font-size: 0.65rem; color: var(--ink-red); font-weight: 900; letter-spacing: 2px; }
+.footer-group a { color: #888; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+.footer-group a:hover { color: #fff; }
+
+/* RESPONSIVO GERAL */
+@media (max-width: 768px) {
+  .footer-container { flex-direction: column; text-align: center; align-items: center; }
+  .card-stealth-form { padding: 30px 20px; }
+  .hero-logo-main { width: 140px; }
+}
