@@ -7,7 +7,11 @@ Este projeto é uma aplicação Full Stack desenvolvida para automatizar a gest�
   <img width="30%" alt="Captura de tela 2026-02-17 235149" src="https://github.com/user-attachments/assets/0d76c12d-ef1b-43c0-952e-0fc16b87f666" />
   <img width="30%" alt="Captura de tela 2026-02-17 235140" src="https://github.com/user-attachments/assets/98f91c83-2696-42cf-b991-3b03a17f1ba0" />
   <img width="30%" alt="Captura de tela 2026-02-17 235351" src="https://github.com/user-attachments/assets/f4fa87e1-74e0-4adb-ba74-9e34bd9b4818" />
+  <img width="30%" alt="Captura de tela 2026-02-18 125454" src="https://github.com/user-attachments/assets/79e638c9-1c42-47fa-a17b-834b43853638" />
+  <img width="30%" alt="Captura de tela 2026-02-26 111943" src="https://github.com/user-attachments/assets/b2651ef9-87ef-45a0-b67a-e5624c231cd2" />
+
 <p/>
+
   
 ## 🛠️ Tecnologias Utilizadas
 
