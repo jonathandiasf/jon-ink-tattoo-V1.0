@@ -2,6 +2,13 @@
 
 Este projeto é uma aplicação Full Stack desenvolvida para automatizar a gestão de orçamentos e a exibição de portfólio de um estúdio de tatuagem real. A aplicação une uma interface moderna em React com um ecossistema robusto em Django.
 
+<p align="left">
+  <img width="30%" alt="Captura de tela 2026-02-17 235233" src="https://github.com/user-attachments/assets/720d6feb-a679-4473-b063-25904bbbc157" />
+  <img width="30%" alt="Captura de tela 2026-02-17 235149" src="https://github.com/user-attachments/assets/0d76c12d-ef1b-43c0-952e-0fc16b87f666" />
+  <img width="30%" alt="Captura de tela 2026-02-17 235140" src="https://github.com/user-attachments/assets/98f91c83-2696-42cf-b991-3b03a17f1ba0" />
+  <img width="30%" alt="Captura de tela 2026-02-17 235351" src="https://github.com/user-attachments/assets/f4fa87e1-74e0-4adb-ba74-9e34bd9b4818" />
+<p/>
+  
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
