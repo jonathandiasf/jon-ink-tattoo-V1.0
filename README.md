@@ -1,4 +1,4 @@
-# Jon Ink Tattoo Studio - Full Stack Project 🖋️💻
+# Jon Ink Tattoo Studio - Full Stack Project 💻
 
 Este projeto é uma aplicação Full Stack desenvolvida para automatizar a gestão de orçamentos e a exibição de portfólio de um estúdio de tatuagem real. A aplicação une uma interface moderna em React com um ecossistema robusto em Django.
 
